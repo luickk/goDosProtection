@@ -1,7 +1,7 @@
 package main
 
 import (
-  "goDosProtection/pkg/goDosProtection"
+  "goDosProtection"
   "net"
   "strings"
   "fmt"
