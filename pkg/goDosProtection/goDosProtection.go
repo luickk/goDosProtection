@@ -32,10 +32,6 @@ func (dC *dosController) Client(address string) bool {
   return false
 }
 
-func (dC *dosController) LookUpClient(address string) {
-  // if dC.ClientMap[address].
-}
-
 func TimerRoutine(expTime time.Duration) *timerRoutine {
   timer := time.NewTimer(expTime)
   tR := timerRoutine { *timer, false }
