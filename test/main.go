@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+  // initiating DOS protection with 10 second reconnection delay
   dp := goDosProtection.New(10)
 
   ln, err := net.Listen("tcp", "127.0.0.1:8081")

@@ -3,7 +3,10 @@
 Simple and very low level ip-address(string) based server side denial of service attack protection by limiting connection frequency.
 
 Server Example:
-```
+``` go
+// initiating DOS protection with 10 second reconnection delay
+dp := goDosProtection.New(10)
+
 conn, err := ln.Accept()
 if err != nil {
     fmt.Println(err)
