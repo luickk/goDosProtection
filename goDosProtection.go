@@ -28,10 +28,8 @@ func New(reconnectTimeLimit int) dosController{
 func (dC *dosController) Client(address string) bool {
   if tR, ok := dC.ClientMap[address]; !ok {
     dC.ClientMap[address] = TimerRoutine(time.Second * time.Duration(dC.ReconnectTimeLimit))
-    fmt.Println("dd")
     return false
   } else if tR.expired {
-    fmt.Println("aa")
     dC.ClientMap[address] = TimerRoutine(time.Second * time.Duration(dC.ReconnectTimeLimit))
     return false
   }
